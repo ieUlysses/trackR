@@ -5,6 +5,7 @@ const App = () => {
   return (
     <div>
       <View />
+      <h1>Test</h1>
     </div>
   )
 }
