@@ -67,6 +67,9 @@ function Provider(props) {
 
     const darkModeTheme = createTheme(getDesignTokens(Mode));
 
+    //Following block responsible for slideshow mechanics
+    const [count, setCount] = useState(0)
+    const values = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 
     return (
