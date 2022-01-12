@@ -7,6 +7,7 @@
 import React from 'react'
 import { Container } from "@mui/material"
 
+import OnPageNav from '../Components/OnPageNav/OnPageNav'
 
 function Home() {
 
@@ -14,6 +15,7 @@ function Home() {
     return (
         <Container>
             <h1>Home</h1>
+            <OnPageNav />
         </Container>
     )
 }
