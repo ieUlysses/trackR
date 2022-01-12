@@ -30,60 +30,60 @@ function SpeeedDial() {
     //import context
 
     return (
-        <Box sx={{ height: 320, transform: "translateZ(0px)", flexGrow: 1 }}>
-            <SpeedDial
-                direction="left"
-                ariaLabel="SpeedDial basic example"
+
+        <SpeedDial
+            direction="left"
+            ariaLabel="SpeedDial basic example"
+            sx={{
+                alignSelf: "middle",
+
+
+                ".MuiSpeedDial-fab:hover": {
+                    color: "red",
+                    bgcolor: "surfaces.primary"
+                },
+                ".MuiSpeedDial-fab": {
+                    color: "text.primary",
+                    bgcolor: "surfaces.primary"
+                }
+            }}
+            icon={<SegmentIcon />}
+        >
+            <SpeedDialAction
+                onClick={toggleColorMode}
+                icon={Mode === "light" ? <LightMode /> : <DarkMode />}
+                tooltipTitle={Mode === "light" ? "Dark Mode" : "Light Mode"}
+                tooltipPlacement="bottom"
                 sx={{
-                    position: "absolute",
-                    top: 16,
-                    right: 16,
-                    ".MuiSpeedDial-fab:hover": {
-                        color: "red",
-                        bgcolor: "surfaces.primary"
-                    },
-                    ".MuiSpeedDial-fab": {
+                    color: "text.primary",
+                    backgroundColor: "surfaces.primary",
+
+                    "&:hover": {
                         color: "text.primary",
-                        bgcolor: "surfaces.primary"
+                        backgroundColor: "surfaces.primary"
                     }
                 }}
-                icon={<SegmentIcon />}
-            >
+            />
+            {actions.map((action) => (
                 <SpeedDialAction
-                    onClick={toggleColorMode}
-                    icon={Mode === "light" ? <LightMode /> : <DarkMode />}
-                    tooltipTitle={Mode === "light" ? "Dark Mode" : "Light Mode"}
+                    key={action.name}
+                    icon={action.icon}
+                    tooltipTitle={action.name}
                     tooltipPlacement="bottom"
+                    to={action.to}
+                    component={NavLink}
                     sx={{
                         color: "text.primary",
                         backgroundColor: "surfaces.primary",
-
                         "&:hover": {
                             color: "text.primary",
                             backgroundColor: "surfaces.primary"
                         }
                     }}
                 />
-                {actions.map((action) => (
-                    <SpeedDialAction
-                        key={action.name}
-                        icon={action.icon}
-                        tooltipTitle={action.name}
-                        tooltipPlacement="bottom"
-                        to={action.to}
-                        component={NavLink}
-                        sx={{
-                            color: "text.primary",
-                            backgroundColor: "surfaces.primary",
-                            "&:hover": {
-                                color: "text.primary",
-                                backgroundColor: "surfaces.primary"
-                            }
-                        }}
-                    />
-                ))}
-            </SpeedDial>
-        </Box>
+            ))}
+        </SpeedDial>
+
     );
 };
 

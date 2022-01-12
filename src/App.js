@@ -10,6 +10,7 @@ import CreateIntro from "./Pages/CreateIntro"
 import CreateProcess from "./Pages/CreateProcess"
 import Gallery from "./Pages/Gallery"
 import SpeeedDial from "./Components/SpeeedDial/SpeeedDial";
+import NavBar from "./Components/NavBar/NavBar";
 
 
 /* 
@@ -26,7 +27,7 @@ function App() {
     <>
       <ThemeProvider theme={darkModeTheme}>
 
-        <SpeeedDial />
+        <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/createintro" element={<CreateIntro />} />

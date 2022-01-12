@@ -55,11 +55,13 @@ function Provider(props) {
                 ...(Mode === "light"
                     ? {
                         primary: "#ced4da",
-                        main: "#212D40"
+                        main: "#212D40",
+                        banner: "#f39610"
                     }
                     : {
                         primary: "#343a40",
-                        main: "#11151C"
+                        main: "#11151C",
+                        banner: "#d7912c"
                     })
             }
         }
