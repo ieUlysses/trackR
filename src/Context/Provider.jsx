@@ -1,7 +1,8 @@
-import { createTheme } from "@mui/material";
-import { React, useState } from "react";
-
 import Context from "./Context";
+import { createTheme } from "@mui/material";
+import { React, useState, useEffect } from "react";
+const axios = require('axios')
+
 
 
 
@@ -73,11 +74,35 @@ function Provider(props) {
     const [count, setCount] = useState(0)
     const values = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
+    //Responsible for open state of dialogue comp in SpeedDial > PopUp
     const [open, setOpen] = useState(false);
+
+
+    const [data, setData] = useState([])
+
+
+    const url = `https://jsonplaceholder.typicode.com/users`
+    useEffect(() => {
+        try {
+            const fetchData = async () => {
+                const user = await axios.get(url)
+                console.log(user.data)
+                setData(user.data)
+
+            }
+            fetchData();
+        } catch (error) {
+            console.log(error)
+        }
+    }, [url])
+
+
+
+
     return (
         <>
             <Context.Provider
-                value={{ Mode, setMode, darkModeTheme, count, setCount, values, setOpen, open }}
+                value={{ Mode, setMode, darkModeTheme, count, setCount, values, setOpen, open, data, setData }}
             >
                 {props.children}
             </Context.Provider>
