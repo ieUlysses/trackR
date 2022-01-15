@@ -11,7 +11,9 @@
 */
 
 import { React } from 'react'
-import { Container } from "@mui/material"
+import { Container, Box } from "@mui/material"
+
+import TaskView from "../Components/TaskView/TaskView"
 
 
 function View() {
@@ -19,10 +21,11 @@ function View() {
 
 
     return (
-        <Container>
-            <h1>
-                View
-            </h1>
+        <Container sx={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh", backgroundColor: "red" }}>
+            <Box sx={{ backgroundColor: "blue", padding: "5px" }}>
+                <TaskView />
+            </Box>
+
         </Container>
     )
 }
