@@ -5,17 +5,25 @@
 */
 
 import React from 'react'
-import { Container } from "@mui/material"
+import { Container, Box } from "@mui/material"
 
 import OnPageNav from '../Components/OnPageNav/OnPageNav'
+import LandingImgGallery from '../Components/LandingImgGallery/LandingImgGallery'
 
 function Home() {
 
 
     return (
-        <Container>
-            <h1>Home</h1>
+
+
+
+        <Container sx={{ display: "flex", flexDirection: "column", justifyContent: "space-evenly", alignItems: "center", height: "100vh", }}>
+
+            <LandingImgGallery />
+
+
             <OnPageNav />
+
         </Container>
     )
 }
