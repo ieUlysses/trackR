@@ -21,10 +21,12 @@ function View() {
 
 
     return (
-        <Container sx={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh", backgroundColor: "red" }}>
-            <Box sx={{ backgroundColor: "blue", padding: "5px" }}>
-                <TaskView />
-            </Box>
+        <Container maxWidth="xl" sx={{
+            height: "100vh",
+            display: "flex", justifyContent: "center", alignItems: "center",
+        }}>
+
+            <TaskView />
 
         </Container>
     )

@@ -1,16 +1,15 @@
 import {
-    Card,
-    CardActions,
-    CardContent,
-    Paper,
-    Typography, Container
+    ImageList, ImageListItem, Container,
+    Typography,
 } from "@mui/material";
-import { styled } from "@mui/system";
+import { Box, styled } from "@mui/system";
 import { React, useContext } from "react";
 import Context from "../../Context/Context";
 import DecreaseBtn from "../ControlBtns/DecreaseBtn/DecreaseBtn";
 import IncreaseButton from "../ControlBtns/IncreaseBtn/IncreaseBtn";
 import ResetBtn from "../ControlBtns/ResetBtn/ResetBtn";
+
+import Slide from "../Slide/Slide"
 
 function ResultBox() {
     const context = useContext(Context);
@@ -37,19 +36,24 @@ function ResultBox() {
             return <Error>Please Reset Counter</Error>;
         } else {
             //console.log("Between");
-            return <Value>{data[`${count}`].name}</Value>;
+            return <Slide name={data[`${count}`].name} id={data[`${count}`].id} email={data[`${count}`].email} />;
         }
+
     }
-
-
 
     console.log(count);
 
     return (
         <>
+            <Control />
+        </>
+    );
+}
 
-            <Card
-                sx={{ backgroundColor: "surfaces.primary", width: "175px" }}
+
+export default ResultBox;
+{/* <Card
+                sx={{ backgroundColor: "surfaces.primary", width: "80vw", height: 550, borderRadius: "5px", display: "flex", flexDirection: "column", justifyContent: "space-between" }}
                 component={Paper}
                 elevation={8}
             >
@@ -63,8 +67,5 @@ function ResultBox() {
                 </CardActions>
             </Card>
 
-        </>
-    );
-}
 
-export default ResultBox;
+ */}
