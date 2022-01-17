@@ -43,16 +43,16 @@ function OnPageNav() {
     };
 
     return (
-        <Container sx={{ display: "flex", flexDirection: "row", justifyContent: "space-between" }}>
+        <Container sx={{ display: "flex", flexDirection: "row", justifyContent: "space-between", flexWrap: "wrap", width: "75%", backgroundColor: "blue" }}>
             {actions.map((action) => (
-                <Card sx={{ maxWidth: "250px", backgroundColor: "surfaces.primary" }}>
+                <Card sx={{ maxWidth: "250px", backgroundColor: "surfaces.primary", }}>
                     <CardContent>
-                        <Typography>
+                        <Typography sx={{ textAlign: "center" }}>
                             {action.brief}
                         </Typography>
                     </CardContent>
 
-                    <CardActions>
+                    <CardActions sx={{ height: "15px" }}>
                         <IconButton to={action.to} component={NavLink} sx={{ color: "text.primary" }} disabled={action.disabled}>
                             {action.icon}
                         </IconButton>
@@ -75,8 +75,9 @@ function OnPageNav() {
                     </Collapse>
 
 
-                </Card>))}
-        </Container>
+                </Card>))
+            }
+        </Container >
     )
 }
 

@@ -12,7 +12,6 @@ import Gallery from "./Pages/Gallery"
 import SpeeedDial from "./Components/SpeeedDial/SpeeedDial";
 import NavBar from "./Components/NavBar/NavBar";
 
-
 /* 
 Notes:
 Future=> look into importing speeedial under an alies
@@ -25,18 +24,18 @@ function App() {
 
   return (
     <>
-      <ThemeProvider theme={darkModeTheme}>
-
-        <NavBar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/createintro" element={<CreateIntro />} />
-          <Route path="/createprocess" element={<CreateProcess />} />
-          <Route path="/gallery" element={<Gallery />} />
-          <Route path="/view" element={<View />} />
-        </Routes>
-
-      </ThemeProvider>
+      <div className="App">
+        <ThemeProvider theme={darkModeTheme}>
+          <NavBar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/createintro" element={<CreateIntro />} />
+            <Route path="/createprocess" element={<CreateProcess />} />
+            <Route path="/gallery" element={<Gallery />} />
+            <Route path="/view" element={<View />} />
+          </Routes>
+        </ThemeProvider>
+      </div>
     </>
   );
 }

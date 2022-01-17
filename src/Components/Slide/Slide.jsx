@@ -11,38 +11,32 @@ function Slide(props) {
 
     return (
         <>
-            <Container sx={{ display: "flex", flexDirection: "column", height: "75vh", borderRadius: "5px" }}>
 
-                <Box sx={{ display: "flex", height: "95%" }}>
-                    <Box sx={{ width: "45%", backgroundColor: "green", display: "flex", flexDirection: "column", justifyContent: "space-evenly" }}>
-                        <Typography variant="h1">{props.id}</Typography>
-                        <Typography variant="p">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id deserunt corporis, vitae maxime voluptatibus modi doloremque quibusdam ratione possimus, omnis quis voluptatem fuga minima, alias cupiditate eius! Vel, excepturi deserunt!</Typography>
-                        <Typography variant="p">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id deserunt corporis, vitae maxime voluptatibus modi doloremque quibusdam ratione possimus, omnis quis voluptatem fuga minima, alias cupiditate eius! Vel, excepturi deserunt!</Typography>
-                    </Box>
-                    <Box sx={{ width: "55%", backgroundColor: "blue", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                        <ImageList variant="masonry" sx={{ height: 350, borderRadius: "5px", width: "75%" }} cols={3} gap={8}>
-                            {itemData.map((item) => (
-                                <ImageListItem key={item.img}>
-                                    <img
-                                        style={{ borderRadius: "5px" }}
-                                        src={`${item.img}?w=150&fit=crop&auto=format`}
-                                        srcSet={`${item.img}?w=150&fit=crop&auto=format&dpr=2 2x`}
-                                        alt={item.title}
-                                        loading="lazy"
-                                    />
-                                </ImageListItem>
-                            ))}
-                        </ImageList>
-                    </Box>
+
+            <Box sx={{ display: "flex", height: "95%" }}>
+                <Box sx={{ width: "45%", backgroundColor: "green", display: "flex", flexDirection: "column", justifyContent: "space-evenly" }}>
+                    <Typography variant="h1">{props.id}</Typography>
+                    <Typography variant="p">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id deserunt corporis, vitae maxime voluptatibus modi doloremque quibusdam ratione possimus, omnis quis voluptatem fuga minima, alias cupiditate eius! Vel, excepturi deserunt!</Typography>
+                    <Typography variant="p">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id deserunt corporis, vitae maxime voluptatibus modi doloremque quibusdam ratione possimus, omnis quis voluptatem fuga minima, alias cupiditate eius! Vel, excepturi deserunt!</Typography>
                 </Box>
-                <Box sx={{ width: "100%", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-                    <DecreaseBtn />
-                    <ResetBtn />
-                    <IncreaseBtn />
-
-
+                <Box sx={{ width: "55%", backgroundColor: "blue", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                    <ImageList variant="masonry" sx={{ height: 350, borderRadius: "5px", width: "75%" }} cols={3} gap={8}>
+                        {itemData.map((item) => (
+                            <ImageListItem key={item.img}>
+                                <img
+                                    style={{ borderRadius: "5px" }}
+                                    src={`${item.img}?w=150&fit=crop&auto=format`}
+                                    srcSet={`${item.img}?w=150&fit=crop&auto=format&dpr=2 2x`}
+                                    alt={item.title}
+                                    loading="lazy"
+                                />
+                            </ImageListItem>
+                        ))}
+                    </ImageList>
                 </Box>
-            </Container>
+            </Box>
+
+
         </>
     )
 }
