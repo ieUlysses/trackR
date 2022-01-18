@@ -1,12 +1,19 @@
-import { React, useState } from 'react'
-import { Card, CardActions, CardContent, Collapse, Container, IconButton, styled, Typography } from "@mui/material"
+import { React, /* useState */ } from 'react'
+import { Card, CardActions, CardContent, /* Collapse ,*/ Container, IconButton, /* styled,  */ Typography } from "@mui/material"
 
 
 
 import { NavLink } from "react-router-dom";
 import {
-    AddTask, Edit, RemoveRedEye, ArrowDropDown
+    AddTask, Edit, RemoveRedEye, /* ArrowDropDown */
 } from '@mui/icons-material';
+
+/*
+Notes:
+    -   Instead of drop down look into mui helper text
+    -   only if it doesn't function the same wit hopen close logic
+
+*/
 
 const actions = [
     { icon: <RemoveRedEye />, name: "View Tutorials", to: "/view", discription: "The following page will allow you to browse through our tutorials at your own leasure. Should you have any questions plese ask your team lead", brief: "Looking to up skill? You're in the right place", disabled: false },
@@ -20,7 +27,7 @@ const actions = [
     Re Bool's:
         When using bools in the above manner do not follow normal syntax  ie:(dont wrap with quotes)
  */
-
+/* 
 const ExpandMore = styled((props) => {
     const { expand, ...other } = props;
     return <IconButton {...other} />;
@@ -31,19 +38,19 @@ const ExpandMore = styled((props) => {
     transition: theme.transitions.create('transform', {
         duration: theme.transitions.duration.shortest,
     }),
-}));
+})); */
 
 
 function OnPageNav() {
 
-    const [expanded, setExpanded] = useState(false);
+    /* const [expanded, setExpanded] = useState(false);
 
     const handleExpandClick = () => {
         setExpanded(!expanded);
-    };
+    }; */
 
     return (
-        <Container sx={{ display: "flex", flexDirection: "row", justifyContent: "space-between", flexWrap: "wrap", width: "75%", backgroundColor: "blue" }}>
+        <Container sx={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", width: "75%", backgroundColor: "blue" }}>
             {actions.map((action) => (
                 <Card sx={{ maxWidth: "250px", backgroundColor: "surfaces.primary", }}>
                     <CardContent>
@@ -56,23 +63,23 @@ function OnPageNav() {
                         <IconButton to={action.to} component={NavLink} sx={{ color: "text.primary" }} disabled={action.disabled}>
                             {action.icon}
                         </IconButton>
-                        <ExpandMore
+                        {/*  <ExpandMore
                             expand={expanded}
                             onClick={handleExpandClick}
                             aria-expanded={expanded}
                             aria-label="show more"
                         >
                             <ArrowDropDown />
-                        </ExpandMore>
+                        </ExpandMore> */}
                     </CardActions>
-                    <Collapse in={expanded} timeout="auto" unmountOnExit>
+                    {/* <Collapse in={expanded} timeout="auto" unmountOnExit>
                         <CardContent>
                             <Typography paragraph>Notes:</Typography>
                             <Typography paragraph>
                                 {action.discription}
                             </Typography>
                         </CardContent>
-                    </Collapse>
+                    </Collapse> */}
 
 
                 </Card>))
