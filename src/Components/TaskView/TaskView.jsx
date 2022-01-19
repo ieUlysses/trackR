@@ -45,9 +45,9 @@ function ResultBox() {
 
     return (
         <>
-            <Container sx={{ display: "flex", flexDirection: "column", height: "75vh", borderRadius: "5px" }}>
+            <Container sx={{ display: "flex", flexDirection: "column", height: "75vh", borderRadius: "5px", backgroundColor: "surfaces.primary" }}>
                 <Control />
-                <Box sx={{ width: "100%", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+                <Box sx={{ width: "100%", display: "flex", alignItems: "center", justifyContent: "space-between", height: "12px" }}>
                     <DecreaseBtn />
                     <ResetBtn />
                     <IncreaseButton />

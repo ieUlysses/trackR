@@ -13,15 +13,17 @@
 
 import React from 'react'
 import { Container } from "@mui/material"
+import Gallery from './Gallery'
+
 
 
 function CreateIntro() {
 
 
     return (
-        <Container>
-            <h1>Create</h1>
-        </Container>
+
+        <Gallery />
+
     )
 }
 

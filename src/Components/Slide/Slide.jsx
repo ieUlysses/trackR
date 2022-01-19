@@ -1,8 +1,6 @@
-import { Box, Container, ImageList, ImageListItem, Typography } from "@mui/material"
+import { Box, Typography } from "@mui/material"
 import React from "react"
-import DecreaseBtn from "../ControlBtns/DecreaseBtn/DecreaseBtn"
-import IncreaseBtn from "../ControlBtns/IncreaseBtn/IncreaseBtn"
-import ResetBtn from "../ControlBtns/ResetBtn/ResetBtn"
+
 
 
 
@@ -14,13 +12,13 @@ function Slide(props) {
 
 
             <Box sx={{ display: "flex", height: "95%" }}>
-                <Box sx={{ width: "45%", backgroundColor: "green", display: "flex", flexDirection: "column", justifyContent: "space-evenly" }}>
-                    <Typography variant="h1">{props.id}</Typography>
-                    <Typography variant="p">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id deserunt corporis, vitae maxime voluptatibus modi doloremque quibusdam ratione possimus, omnis quis voluptatem fuga minima, alias cupiditate eius! Vel, excepturi deserunt!</Typography>
-                    <Typography variant="p">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id deserunt corporis, vitae maxime voluptatibus modi doloremque quibusdam ratione possimus, omnis quis voluptatem fuga minima, alias cupiditate eius! Vel, excepturi deserunt!</Typography>
+                <Box sx={{ width: "45%", display: "flex", flexDirection: "column", justifyContent: "space-evenly" }}>
+                    <Typography variant="h1" sx={{ fontSize: "10vw" }}>ID:{props.id}</Typography>
+                    <Typography variant="p" sx={{ fontSize: "1.5vw" }}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id deserunt corporis, vitae maxime voluptatibus modi doloremque quibusdam ratione possimus, omnis quis voluptatem fuga minima, alias cupiditate eius! Vel, excepturi deserunt!</Typography>
+                    <Typography variant="p" sx={{ fontSize: "1.5vw" }}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id deserunt corporis, vitae maxime voluptatibus modi doloremque quibusdam ratione possimus, omnis quis voluptatem fuga minima, alias cupiditate eius! Vel, excepturi deserunt!</Typography>
                 </Box>
-                <Box sx={{ width: "55%", backgroundColor: "blue", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                    <ImageList variant="masonry" sx={{ height: 350, borderRadius: "5px", width: "75%" }} cols={3} gap={8}>
+                <Box sx={{ width: "55%", display: "flex", flexFlow: "row wrap", alignItems: "center", justifyContent: "center" }}>
+                    {/* <ImageList variant="masonry" sx={{ height: 350, borderRadius: "5px", width: "75%" }} cols={3} gap={8}>
                         {itemData.map((item) => (
                             <ImageListItem key={item.img}>
                                 <img
@@ -32,7 +30,11 @@ function Slide(props) {
                                 />
                             </ImageListItem>
                         ))}
-                    </ImageList>
+                    </ImageList> */}
+
+                    <img src="https://images.unsplash.com/photo-1549388604-817d15aa0110" alt="title Img" style={{ borderRadius: "5px", width: "75%", height: "75%" }}
+                        loading="lazy" />
+
                 </Box>
             </Box>
 
@@ -42,7 +44,7 @@ function Slide(props) {
 }
 
 
-
+/* 
 
 const itemData = [
     {
@@ -80,6 +82,6 @@ const itemData = [
 
 ];
 
-
+ */
 
 export default Slide
