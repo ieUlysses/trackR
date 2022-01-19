@@ -1,4 +1,4 @@
-This Poroject is hopefully going to be a boost for an ongoing job application. 
+This project is hopefully going to be a boost for an ongoing job application. 
 
 Powered by REact and JS, supported by MUI coded with love in Berlin
 
