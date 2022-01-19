@@ -18,7 +18,7 @@ Notes:
 const actions = [
     { icon: <RemoveRedEye />, name: "View Tutorials", to: "/view", discription: "The following page will allow you to browse through our tutorials at your own leasure. Should you have any questions plese ask your team lead", brief: "Looking to up skill? You're in the right place", disabled: false },
 
-    { icon: <AddTask />, name: "Complete Task", to: "/", discription: "The following page will allow you to Complete a task once you feel confident. You will be timed on this and must login before completing", brief: "Feeling confident and ready to complete a task?", disabled: true },
+    { icon: <AddTask />, name: "Complete Task", to: "/gallery", discription: "The following page will allow you to Complete a task once you feel confident. You will be timed on this and must login before completing", brief: "Feeling confident and ready to complete a task?", disabled: false },
 
     { icon: <Edit />, name: "Create Tutorial", to: "/createIntro", discription: "The following page will allow you to Create a new Tutorial which will be made available to all of those with access to the platform. Learned a new skill? Feel free to share it", brief: "Learned any new tricks lately? Teach us", disabled: false }
 ];
